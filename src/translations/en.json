@@ -1,0 +1,19 @@
+{
+  "title": "gnNews - Up-to-date news",
+
+  "headerSearching": "Search",
+
+  "aboutModalTitle": "About the app",
+
+  "sideMenuCountry": "Select country",
+  "sideMenuView": "Switch view",
+
+  "footerCounter": "Displayed news:",
+
+  "singleNewsButton": "More",
+  "singleNewsModalButton": "Read more:",
+  "loadMoreButton": "Load more...",
+
+  "notFound": "There is nothing to show here...",
+  "fetchError": "An error occurred while fetching data."
+}

@@ -1,0 +1,19 @@
+{
+  "title": "gnNews - Nouvelles à jour",
+
+  "headerSearching": "Recherche",
+
+  "aboutModalTitle": "À propos de l'application",
+
+  "sideMenuCountry": "Choisissez le pays",
+  "sideMenuView": "Changer de vue",
+
+  "footerCounter": "Nouvelles affichées:",
+
+  "singleNewsButton": "Plus",
+  "singleNewsModalButton": "En savoir plus:",
+  "loadMoreButton": "Charger plus...",
+
+  "notFound": "Il n'y a rien à montrer ici...",
+  "fetchError": "Une erreur s'est produite lors de la récupération des données."
+}

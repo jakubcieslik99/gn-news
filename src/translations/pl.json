@@ -1,0 +1,19 @@
+{
+  "title": "gnNews - Newsy na bieżąco",
+
+  "headerSearching": "Szukaj",
+
+  "aboutModalTitle": "O aplikacji",
+
+  "sideMenuCountry": "Wybierz kraj",
+  "sideMenuView": "Przełącz widok",
+
+  "footerCounter": "Wyświetlane newsy:",
+
+  "singleNewsButton": "Więcej",
+  "singleNewsModalButton": "Czytaj więcej:",
+  "loadMoreButton": "Wczytaj więcej...",
+
+  "notFound": "Tutaj nic nie ma...",
+  "fetchError": "Wystąpił błąd podczas pobierania danych."
+}
