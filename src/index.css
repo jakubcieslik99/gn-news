@@ -7,3 +7,85 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
+
+html {
+  @apply main-scroll;
+}
+
+body {
+  @apply bg-blue-900 dark:bg-gray-900 text-gray-50;
+}
+
+.line-clamp {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/*-----CUSTOM SCROLLS-----*/
+.main-scroll,
+.internal-scroll {
+  overflow-x: none;
+  overflow-y: overlay;
+}
+.main-scroll::-webkit-scrollbar,
+.internal-scroll::-webkit-scrollbar {
+  @apply w-[10px];
+}
+.main-scroll::-webkit-scrollbar-track,
+.main-scroll::-webkit-scrollbar-corner,
+.internal-scroll::-webkit-scrollbar-track,
+.internal-scroll::-webkit-scrollbar-corner {
+  @apply bg-transparent;
+}
+.main-scroll::-webkit-scrollbar-thumb {
+  @apply bg-gray-400/40 hover:bg-gray-400/60 rounded-full;
+}
+.internal-scroll::-webkit-scrollbar-thumb {
+  @apply bg-gray-400/30 hover:bg-gray-200/40 rounded-full;
+}
+
+/*-----ELEMENTS-----*/
+main {
+  @apply flex min-h-[100dvh] w-full pt-[185px] pb-[28px] md:pl-[180px] md:pt-[62px];
+}
+
+.content {
+  @apply w-full p-3 mx-2 text-blue-900 dark:text-gray-50 bg-gray-50 dark:bg-gray-700 md:ml-0 md:mr-[10px] rounded-xl;
+}
+
+.corner-lt {
+  background-image: radial-gradient(circle at 100% 100%, transparent 11px, #1e3a8a 12.2px);
+}
+.corner-lt-dark {
+  background-image: radial-gradient(circle at 100% 100%, transparent 11px, #111827 12.2px);
+}
+.corner-rt {
+  background-image: radial-gradient(circle at 0 100%, transparent 11px, #1e3a8a 12.2px);
+}
+.corner-rt-dark {
+  background-image: radial-gradient(circle at 0 100%, transparent 11px, #111827 12.2px);
+}
+.corner-lb {
+  background-image: radial-gradient(circle at 100% 0, transparent 11px, #1e3a8a 12.2px);
+}
+.corner-lb-dark {
+  background-image: radial-gradient(circle at 100% 0, transparent 11px, #111827 12.2px);
+}
+.corner-rb {
+  background-image: radial-gradient(circle at 0 0, transparent 11px, #1e3a8a 12.2px);
+}
+.corner-rb-dark {
+  background-image: radial-gradient(circle at 0 0, transparent 11px, #111827 12.2px);
+}
+.side-rb {
+  background-image: radial-gradient(circle at 0 100%, transparent 16px, #f9fafb 17px);
+}
+.side-rb-dark {
+  background-image: radial-gradient(circle at 0 100%, transparent 16px, #374151 17px);
+}
+
+.side-menu-mobile {
+  height: calc(100dvh - 24px - 24px);
+}

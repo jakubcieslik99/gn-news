@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer'
 import HomeScreen from './screens/HomeScreen'
 import CountryScreen from './screens/CountryScreen'
 import NotFound from './components/universal/NotFound'
+import CornersStyle from './components/universal/CornersStyle'
 
 export default function App() {
   const { language } = useAppSelector(state => state.appSettings)
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/country/:country" element={<CountryScreen />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CornersStyle />
       </main>
 
       <Footer />
