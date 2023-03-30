@@ -21,7 +21,10 @@ export default function SideMenu() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 w-full md:w-[180px] bg-blue-900 dark:bg-gray-900 z-10 md:h-full pt-[133px] md:pt-[62px] md:pb-[28px] flex flex-col">
+    <nav
+      data-testid="side-menu"
+      className="fixed top-0 left-0 w-full md:w-[180px] bg-blue-900 dark:bg-gray-900 z-10 md:h-full pt-[133px] md:pt-[62px] md:pb-[28px] flex flex-col"
+    >
       <div className="flex items-center justify-center gap-3 px-2 py-3 md:pt-[10px] md:pb-[14px]">
         <button
           onClick={() => setShowSideMenuMobile(true)}

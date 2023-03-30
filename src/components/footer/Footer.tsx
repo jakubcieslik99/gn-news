@@ -19,7 +19,10 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer className="fixed bottom-0 z-20 flex items-center justify-between w-full px-6 py-1 text-sm bg-blue-900 dark:bg-gray-900">
+    <footer
+      data-testid="footer"
+      className="fixed bottom-0 z-20 flex items-center justify-between w-full px-6 py-1 text-sm bg-blue-900 dark:bg-gray-900"
+    >
       {pathname.split('/')[1] === '' ? (
         <div className="flex items-center gap-1">
           <div className="text-xs">{tr('footerCounter', language)}</div>

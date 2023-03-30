@@ -76,7 +76,10 @@ export default function Header() {
   }, [theme])
 
   return (
-    <header className="fixed top-0 flex flex-wrap flex-row justify-between w-full md:h-[62px] bg-blue-900 dark:bg-gray-900 md:items-center md:flex-row z-20 realtive">
+    <header
+      data-testid="header"
+      className="fixed top-0 flex flex-wrap flex-row justify-between w-full md:h-[62px] bg-blue-900 dark:bg-gray-900 md:items-center md:flex-row z-20 realtive"
+    >
       <div className="flex items-center justify-between order-1 py-2 pl-2 md:pr-2">
         <Link to="/" onClick={scrollToTopHandler} className="max-w-[155px] md:max-w-[170px] transition active:scale-90">
           <img src={Logo} alt="Logo" />
@@ -108,6 +111,7 @@ export default function Header() {
       <div className="flex items-center order-2 gap-2 pr-4 md:pl-2 md:gap-1 md:order-3">
         <LanguageMenu />
         <button
+          data-testid="switch-theme-button"
           onClick={switchThemeHandler}
           className="p-[6px] border-2 rounded-xl border-gray-50 transition active:scale-90 shadow"
         >
