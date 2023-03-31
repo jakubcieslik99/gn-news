@@ -4,6 +4,7 @@
   "headerSearching": "Search",
 
   "aboutModalTitle": "About the app",
+  "aboutModalBody": "The hardest part of the recruitment task was to create an interesting graphic layout and style it. Due to my experience, in addition to frontend development, also in backend, I had no problems with coding the application state management logic and querying the API server. This was the most enjoyable part of the job, but the whole project turned out to be very interesting and I think it turned out pretty well.",
 
   "sideMenuCountry": "Select country",
   "sideMenuView": "Switch view",

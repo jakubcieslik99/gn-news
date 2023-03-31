@@ -52,7 +52,7 @@ export default function AboutModal(props: AboutModalProps) {
                 </Dialog.Title>
 
                 {/*modal body*/}
-                <div className="flex flex-col w-full mt-4 mb-5 internal-scroll">{'Hello World'}</div>
+                <div className="flex flex-col w-full mt-4 mb-5 internal-scroll">{tr('aboutModalBody', language)}</div>
 
                 {/*modal footer*/}
                 <div className="flex justify-end w-full mb-1 italic">Jakub Cieślik</div>

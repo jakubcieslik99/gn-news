@@ -4,6 +4,7 @@
   "headerSearching": "Szukaj",
 
   "aboutModalTitle": "O aplikacji",
+  "aboutModalBody": "Najcięższe podczas realizacji zadania rekrutacyjnego okazało się stworzenie ciekawego layoutu graficznego i ostylowanie go. Z racji na moje doświadczenie oprócz frontend developmentu również w backendzie, nie miałem problemów z okodowaniem logiki zarządzania stanem aplikacji oraz wykonania zapytań do serwera API. Była to najprzyjemniejsza część zadania, ale cały projekt okazał się być bardzo ciekawy i uważam, że wyszedł całkiem nieźle.",
 
   "sideMenuCountry": "Wybierz kraj",
   "sideMenuView": "Przełącz widok",

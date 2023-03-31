@@ -4,6 +4,7 @@
   "headerSearching": "Recherche",
 
   "aboutModalTitle": "À propos de l'application",
+  "aboutModalBody": "La partie la plus difficile de la tâche de recrutement a été de créer une mise en page graphique intéressante et de la styliser. De par mon expérience, en plus du développement frontend, également en backend, je n'ai eu aucun problème avec le codage de la logique de gestion de l'état de l'application et l'interrogation du serveur API. C'était la partie la plus agréable du travail, mais l'ensemble du projet s'est avéré très intéressant et je pense qu'il s'est plutôt bien passé.",
 
   "sideMenuCountry": "Choisissez le pays",
   "sideMenuView": "Changer de vue",

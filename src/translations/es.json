@@ -4,6 +4,7 @@
   "headerSearching": "Buscar",
 
   "aboutModalTitle": "Acerca de la app",
+  "aboutModalBody": "La parte más difícil de la tarea de reclutamiento fue crear un diseño gráfico interesante y diseñarlo. Debido a mi experiencia, además del desarrollo frontend, también en backend, no tuve problemas para codificar la lógica de administración del estado de la aplicación y consultar el servidor API. Esta fue la parte más agradable del trabajo, pero todo el proyecto resultó ser muy interesante y creo que salió bastante bien.",
 
   "sideMenuCountry": "Seleccionar país",
   "sideMenuView": "Cambiar vista",
