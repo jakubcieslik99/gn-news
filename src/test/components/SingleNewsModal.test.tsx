@@ -29,7 +29,7 @@ describe('SingleNewsModal', () => {
   it('does not render when isOpen is false', async () => {
     const setIsOpen = vi.fn()
     const { queryByText, queryByAltText } = render(
-      <SingleNewsModal isOpen={false} setIsOpen={setIsOpen} result={mockResult} />
+      <SingleNewsModal isOpen={false} setIsOpen={setIsOpen} result={mockResult} />,
     )
 
     await act(async () => {

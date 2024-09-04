@@ -41,7 +41,7 @@ export default function HomeScreen() {
           query: searchParams.get('searching'),
           nextPage,
           fresh: false,
-        })
+        }),
       )
       getHomeNewsNextPageAbort.current = getHomeNewsNextPagePromise.abort
     }
@@ -54,7 +54,7 @@ export default function HomeScreen() {
         category: searchParams.get('category'),
         query: searchParams.get('searching'),
         fresh: true,
-      })
+      }),
     )
     return () => getHomeNewsPromise.abort() /**/
   }, [language, searchParams, dispatch])

@@ -43,7 +43,7 @@ export default function CountryScreen() {
           query: searchParams.get('searching'),
           nextPage,
           fresh: false,
-        })
+        }),
       )
       getCountryNewsNextPageAbort.current = getCountryNewsNextPagePromise.abort
     }
@@ -57,7 +57,7 @@ export default function CountryScreen() {
           category: searchParams.get('category'),
           query: searchParams.get('searching'),
           fresh: true,
-        })
+        }),
       )
       getCountryNewsAbort.current = getCountryNewsPromise.abort
     }

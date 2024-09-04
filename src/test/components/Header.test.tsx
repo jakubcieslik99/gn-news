@@ -9,7 +9,7 @@ describe('Header', () => {
     render(
       <MemoryRouter>
         <Header />
-      </MemoryRouter>
+      </MemoryRouter>,
     )
 
     const switchThemeButton = screen.getByTestId('switch-theme-button')

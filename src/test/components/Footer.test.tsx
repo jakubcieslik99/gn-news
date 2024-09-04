@@ -20,7 +20,7 @@ describe('Footer', () => {
           getHomeNews: appStore.getState().getHomeNews,
           getCountryNews: appStore.getState().getCountryNews,
         },
-      }
+      },
     )
 
     expect(screen.getByText('Wyświetlane newsy:')).toBeInTheDocument()
@@ -52,7 +52,7 @@ describe('Footer', () => {
           },
           getCountryNews: appStore.getState().getCountryNews,
         },
-      }
+      },
     )
 
     expect(screen.getByText('Displayed news:')).toBeInTheDocument()

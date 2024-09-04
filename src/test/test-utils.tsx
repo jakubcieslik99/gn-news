@@ -20,7 +20,7 @@ const render = (
     },
     store = setupStore(preloadedState),
     ...renderOptions
-  }: ExtendedRenderOptions = {}
+  }: ExtendedRenderOptions = {},
 ) => {
   const Wrapper = ({ children }: PropsWithChildren<{}>): JSX.Element => {
     return <Provider store={store}>{children}</Provider>

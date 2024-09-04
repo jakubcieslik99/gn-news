@@ -8,7 +8,7 @@ it('renders not found component for unknown route', () => {
   render(
     <MemoryRouter initialEntries={['/unknown']}>
       <NotFound />
-    </MemoryRouter>
+    </MemoryRouter>,
   )
 
   const notFoundElement = screen.getByTestId('not-found')

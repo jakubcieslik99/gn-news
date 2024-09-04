@@ -33,19 +33,19 @@
 
 ```bash
   cd gn-news
-  npm install
+  pnpm install
 ```
 
 - Run client app in development mode
 
 ```bash
-  npm run dev
+  pnpm run dev
 ```
 
 - Run client app tests
 
 ```bash
-  npm run test
+  pnpm run test
 ```
 
 ## Deployment
@@ -55,14 +55,14 @@
 - Create production build
 
 ```bash
-  npm run build
+  pnpm run build
 ```
 
 ## Environment Variables
 
 ⚙️ To build client app, you will need to add the following environment variables to your .env file
 
-- `VITE_ENV`
+- `VITE_PREVIEW_PORT`
 
 - `VITE_NEWSDATA_API_KEY`
 

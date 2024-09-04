@@ -29,7 +29,7 @@ const getHomeNews = createAsyncThunk('/news/getHomeNews', async (sendData: HomeN
 
     const { data } = await axiosPublic.get(
       `news?apikey=${import.meta.env.VITE_NEWSDATA_API_KEY}${language}${category}${query}${nextPage}`,
-      { signal: controller.signal }
+      { signal: controller.signal },
     )
 
     return { ...data, fresh: sendData.fresh }

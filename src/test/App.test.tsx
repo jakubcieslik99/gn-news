@@ -30,7 +30,7 @@ it('renders home screen by default', () => {
   render(
     <MemoryRouter>
       <HomeScreen />
-    </MemoryRouter>
+    </MemoryRouter>,
   )
 
   const homeScreenElement = screen.getByTestId('home-screen')

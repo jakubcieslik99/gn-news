@@ -12,7 +12,7 @@ export default function LanguageMenu() {
   const dispatch = useAppDispatch()
 
   const [languageOption, setLanguageOption] = useState(
-    languageMenuOptions.find(option => option.value === language) || languageMenuOptions[0]
+    languageMenuOptions.find(option => option.value === language) || languageMenuOptions[0],
   )
 
   const languageHandler = (option: LanguageMenuOption) => {
