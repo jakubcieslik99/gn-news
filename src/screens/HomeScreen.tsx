@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { AnyAction } from 'redux'
 import { scroller } from 'react-scroll'
 import { useAppSelector, useAppDispatch } from '../features/store'
 import { getHomeNews } from '../features/newsSlices/getHomeNews'
@@ -41,7 +42,7 @@ export default function HomeScreen() {
           query: searchParams.get('searching'),
           nextPage,
           fresh: false,
-        }),
+        }) as unknown as AnyAction,
       )
       getHomeNewsNextPageAbort.current = getHomeNewsNextPagePromise.abort
     }
@@ -54,9 +55,9 @@ export default function HomeScreen() {
         category: searchParams.get('category'),
         query: searchParams.get('searching'),
         fresh: true,
-      }),
+      }) as unknown as AnyAction,
     )
-    return () => getHomeNewsPromise.abort() /**/
+    return () => getHomeNewsPromise.abort()
   }, [language, searchParams, dispatch])
 
   useEffect(() => {
@@ -80,7 +81,7 @@ export default function HomeScreen() {
         {displayMode === 'tiles' ? (
           <div className="grid w-full max-w-xs gap-3 mx-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:max-w-none">
             {results.length
-              ? results.map((result, index) => (
+              ? results.map((result: any, index: number) => (
                   <SingleNewsGrid key={index} id={index} type="homeRes" result={result} showSingleNews={showSingleNews} />
                 ))
               : null}
@@ -88,7 +89,7 @@ export default function HomeScreen() {
         ) : (
           <div className="flex flex-col w-full max-w-4xl gap-2 mx-auto">
             {results.length
-              ? results.map((result, index) => (
+              ? results.map((result: any, index: number) => (
                   <SingleNewsList key={index} id={index} type="homeRes" result={result} showSingleNews={showSingleNews} />
                 ))
               : null}

@@ -10,7 +10,7 @@ interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
   route?: string
 }
 
-const render = (
+const render: any = (
   ui: React.ReactElement,
   {
     preloadedState = {

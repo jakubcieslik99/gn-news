@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { Slice, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import {
   AvailableDisplayModes,
   AvailableLanguages,
@@ -36,7 +36,7 @@ const initialState = {
   theme,
 } as AppSettingsState
 
-export const appSettingsSlice = createSlice({
+export const appSettingsSlice: Slice<AppSettingsState> = createSlice({
   name: 'appSettings',
   initialState,
   reducers: {

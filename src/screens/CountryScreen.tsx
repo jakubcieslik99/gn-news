@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import { useParams, useSearchParams } from 'react-router-dom'
+import { AnyAction } from 'redux'
 import { scroller } from 'react-scroll'
 import { useAppSelector, useAppDispatch } from '../features/store'
 import { getCountryNews } from '../features/newsSlices/getCountryNews'
@@ -43,7 +44,7 @@ export default function CountryScreen() {
           query: searchParams.get('searching'),
           nextPage,
           fresh: false,
-        }),
+        }) as unknown as AnyAction,
       )
       getCountryNewsNextPageAbort.current = getCountryNewsNextPagePromise.abort
     }
@@ -57,7 +58,7 @@ export default function CountryScreen() {
           category: searchParams.get('category'),
           query: searchParams.get('searching'),
           fresh: true,
-        }),
+        }) as unknown as AnyAction,
       )
       getCountryNewsAbort.current = getCountryNewsPromise.abort
     }
@@ -85,7 +86,7 @@ export default function CountryScreen() {
         {displayMode === 'tiles' ? (
           <div className="grid w-full max-w-xs gap-2 mx-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:max-w-none">
             {results.length
-              ? results.map((result, index) => (
+              ? results.map((result: any, index: number) => (
                   <SingleNewsGrid key={index} id={index} type="countryRes" result={result} showSingleNews={showSingleNews} />
                 ))
               : null}
@@ -93,7 +94,7 @@ export default function CountryScreen() {
         ) : (
           <div className="flex flex-col w-full max-w-4xl gap-2 mx-auto">
             {results.length
-              ? results.map((result, index) => (
+              ? results.map((result: any, index: number) => (
                   <SingleNewsList key={index} id={index} type="countryRes" result={result} showSingleNews={showSingleNews} />
                 ))
               : null}
