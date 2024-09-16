@@ -26,8 +26,12 @@ export default function Header() {
 
   const [searchParams, setSearchParams] = useSearchParams()
   const [searching, setSearching] = useState(searchParams.get('searching') || '')
-  const [category, setCategory] = useState(searchParams.get('category') || categoryMenuOptions[language][0].value)
-  const [categoryOption, setCategoryMenuOption] = useState(categoryMenuOptions[language][0])
+  const [category, setCategory] = useState(
+    searchParams.get('category') || categoryMenuOptions[language as keyof typeof categoryMenuOptions][0].value,
+  )
+  const [categoryOption, setCategoryMenuOption] = useState(
+    categoryMenuOptions[language as keyof typeof categoryMenuOptions][0],
+  )
 
   const filterURL = (searchingFilter: string, categoryFilter: string) => {
     if (searchingFilter !== '') URL.searching = searchingFilter
@@ -39,6 +43,7 @@ export default function Header() {
     setSearchParams({ ...URL })
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const searchingHandler = (e: any) => {
     e.preventDefault()
     filterURL(searching, category)
@@ -51,9 +56,9 @@ export default function Header() {
 
   const scrollToTopHandler = () => {
     setSearching('')
-    setCategory(categoryMenuOptions[language][0].value)
-    setCategoryMenuOption(categoryMenuOptions[language][0])
-    filterURL('', categoryMenuOptions[language][0].value)
+    setCategory(categoryMenuOptions[language as keyof typeof categoryMenuOptions][0].value)
+    setCategoryMenuOption(categoryMenuOptions[language as keyof typeof categoryMenuOptions][0])
+    filterURL('', categoryMenuOptions[language as keyof typeof categoryMenuOptions][0].value)
 
     scroller.scrollTo('main', {
       spy: true,
@@ -67,7 +72,7 @@ export default function Header() {
   }
 
   useEffect(() => {
-    setCategoryMenuOption(categoryMenuOptions[language][categoryOption.id - 1])
+    setCategoryMenuOption(categoryMenuOptions[language as keyof typeof categoryMenuOptions][categoryOption.id - 1])
   }, [language, categoryOption.id])
 
   useEffect(() => {

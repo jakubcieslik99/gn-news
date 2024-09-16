@@ -19,7 +19,7 @@ export default function CountryScreen() {
   const { loading, error, errorMessage, results, nextPage } = useAppSelector(state => state.getCountryNews)
   const dispatch = useAppDispatch()
 
-  const [singleNews, setSingleNews] = useState<any>(null)
+  const [singleNews, setSingleNews] = useState(null)
   const [showSingleNewsModal, setShowSingleNewsModal] = useState(false)
 
   const params = useParams()
@@ -86,7 +86,8 @@ export default function CountryScreen() {
         {displayMode === 'tiles' ? (
           <div className="grid w-full max-w-xs gap-2 mx-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:max-w-none">
             {results.length
-              ? results.map((result: any, index: number) => (
+              ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                results.map((result: any, index: number) => (
                   <SingleNewsGrid key={index} id={index} type="countryRes" result={result} showSingleNews={showSingleNews} />
                 ))
               : null}
@@ -94,7 +95,8 @@ export default function CountryScreen() {
         ) : (
           <div className="flex flex-col w-full max-w-4xl gap-2 mx-auto">
             {results.length
-              ? results.map((result: any, index: number) => (
+              ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                results.map((result: any, index: number) => (
                   <SingleNewsList key={index} id={index} type="countryRes" result={result} showSingleNews={showSingleNews} />
                 ))
               : null}

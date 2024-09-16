@@ -15,7 +15,7 @@ const store: Store = configureStore({
   devTools: import.meta.env.VITE_APP_ENV === 'development' ? true : false,
 })
 
-export const setupStore: any = (preloadedState?: PreloadedState<RootState>) => {
+export const setupStore = (preloadedState?: PreloadedState<RootState>) => {
   return configureStore({ reducer, preloadedState })
 }
 

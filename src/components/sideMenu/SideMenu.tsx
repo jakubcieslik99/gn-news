@@ -44,7 +44,7 @@ export default function SideMenu() {
       </div>
 
       <ul className="hidden h-full pl-3 md:flex md:flex-col internal-scroll">
-        {sideMenuCountries[language].map(country => (
+        {sideMenuCountries[language as keyof typeof sideMenuCountries].map(country => (
           <li key={country.code}>
             <Link
               to={`/country/${country.link}`}
@@ -72,7 +72,7 @@ export default function SideMenu() {
       <SideMenuMobile
         isOpen={showSideMenuMobile}
         setIsOpen={setShowSideMenuMobile}
-        countries={sideMenuCountries[language]}
+        countries={sideMenuCountries[language as keyof typeof sideMenuCountries]}
       />
     </nav>
   )

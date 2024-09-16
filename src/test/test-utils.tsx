@@ -10,6 +10,7 @@ interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
   route?: string
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const render: any = (
   ui: React.ReactElement,
   {
@@ -22,7 +23,7 @@ const render: any = (
     ...renderOptions
   }: ExtendedRenderOptions = {},
 ) => {
-  const Wrapper = ({ children }: PropsWithChildren<{}>): JSX.Element => {
+  const Wrapper = ({ children }: PropsWithChildren<object>): JSX.Element => {
     return <Provider store={store}>{children}</Provider>
   }
 

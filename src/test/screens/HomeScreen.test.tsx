@@ -8,9 +8,9 @@ it('renders home screen when the route matches', () => {
   render(
     <MemoryRouter initialEntries={['/']}>
       <HomeScreen />
-    </MemoryRouter>
+    </MemoryRouter>,
   )
 
   const homeScreenElement = screen.getByTestId('home-screen')
-  expect(homeScreenElement).toBeInTheDocument()
+  expect(homeScreenElement).toBeDefined()
 })

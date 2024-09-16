@@ -9,21 +9,21 @@ it('renders header', () => {
   render(<App />)
 
   const headerElement = screen.getByTestId('header')
-  expect(headerElement).toBeInTheDocument()
+  expect(headerElement).toBeDefined()
 })
 
 it('renders side menu', () => {
   render(<App />)
 
   const sideMenuElement = screen.getByTestId('side-menu')
-  expect(sideMenuElement).toBeInTheDocument()
+  expect(sideMenuElement).toBeDefined()
 })
 
 it('renders footer', () => {
   render(<App />)
 
   const footerElement = screen.getByTestId('footer')
-  expect(footerElement).toBeInTheDocument()
+  expect(footerElement).toBeDefined()
 })
 
 it('renders home screen by default', () => {
@@ -34,5 +34,5 @@ it('renders home screen by default', () => {
   )
 
   const homeScreenElement = screen.getByTestId('home-screen')
-  expect(homeScreenElement).toBeInTheDocument()
+  expect(homeScreenElement).toBeDefined()
 })

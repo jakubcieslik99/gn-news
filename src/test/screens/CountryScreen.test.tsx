@@ -8,9 +8,9 @@ it('renders country screen when the route matches', () => {
   render(
     <MemoryRouter initialEntries={['/country/us']}>
       <CountryScreen />
-    </MemoryRouter>
+    </MemoryRouter>,
   )
 
   const countryScreenElement = screen.getByTestId('country-screen')
-  expect(countryScreenElement).toBeInTheDocument()
+  expect(countryScreenElement).toBeDefined()
 })

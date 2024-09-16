@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { Slice, createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import axiosPublic from '../../api/axiosPublic'
 
 interface HomeNewsRequest {
@@ -12,6 +12,7 @@ interface HomeNewsRequest {
 export interface HomeNewsResponse {
   status: string
   totalResults: number
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   results: any[] | []
   nextPage: string
   fresh?: boolean
@@ -33,6 +34,7 @@ const getHomeNews = createAsyncThunk('/news/getHomeNews', async (sendData: HomeN
     )
 
     return { ...data, fresh: sendData.fresh }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     return thunkAPI.rejectWithValue('fetchError')
   }
@@ -44,6 +46,7 @@ export interface HomeNewsState {
   loading: boolean
   error: boolean
   errorMessage: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   results: any[] | []
   nextPage: string
 }
@@ -56,7 +59,7 @@ const initialState = {
   nextPage: '',
 } as HomeNewsState
 
-export const getHomeNewsSlice = createSlice({
+export const getHomeNewsSlice: Slice<HomeNewsState> = createSlice({
   name: 'getHomeNews',
   initialState,
   reducers: {
@@ -75,6 +78,7 @@ export const getHomeNewsSlice = createSlice({
       else state.results = [...state.results, ...action.payload.results]
       state.nextPage = action.payload.nextPage
     })
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     builder.addCase(getHomeNews.rejected, (state, action: PayloadAction<any>) => {
       state.loading = false
       if (action.payload) {

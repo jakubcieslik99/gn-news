@@ -33,7 +33,7 @@ export default function CategoryMenu(props: CategoryMenuProps) {
             leaveTo="opacity-0"
           >
             <Listbox.Options className="absolute z-30 w-full overflow-hidden text-blue-900 bg-gray-300 shadow-xl cursor-pointer dark:text-gray-50 dark:bg-gray-700 top-10 rounded-xl">
-              {categoryMenuOptions[language].map(option => (
+              {categoryMenuOptions[language as keyof typeof categoryMenuOptions].map(option => (
                 <Listbox.Option key={option.id} value={option} className="px-3 py-[6px] truncate hover:bg-black/20">
                   {option.name}
                 </Listbox.Option>
