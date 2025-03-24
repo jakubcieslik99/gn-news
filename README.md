@@ -63,7 +63,7 @@
 ⚙️ To build client app, you will need to add the following environment variables to your .env file
 
 - `VITE_PREVIEW_PORT`
-
+- `VITE_APP_URL`
 - `VITE_NEWSDATA_API_KEY`
 
 ## Languages
