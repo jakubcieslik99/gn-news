@@ -4,16 +4,9 @@ import appSettingsReducer from './appSlices/appSettings'
 import getHomeNewsReducer from './newsSlices/getHomeNews'
 import getCountryNewsReducer from './newsSlices/getCountryNews'
 
-const reducer = {
-  appSettings: appSettingsReducer,
-  getHomeNews: getHomeNewsReducer,
-  getCountryNews: getCountryNewsReducer,
-}
+const reducer = { appSettings: appSettingsReducer, getHomeNews: getHomeNewsReducer, getCountryNews: getCountryNewsReducer }
 
-const store: Store = configureStore({
-  reducer,
-  devTools: import.meta.env.VITE_APP_ENV === 'development' ? true : false,
-})
+const store: Store = configureStore({ reducer, devTools: import.meta.env.VITE_APP_ENV === 'development' ? true : false })
 
 export const setupStore = (preloadedState?: PreloadedState<RootState>) => {
   return configureStore({ reducer, preloadedState })

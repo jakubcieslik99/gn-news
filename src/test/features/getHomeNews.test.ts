@@ -2,20 +2,9 @@ import { describe, it, expect } from 'vitest'
 import getHomeNewsReducer, { getHomeNews, HomeNewsResponse, HomeNewsState } from '../../features/newsSlices/getHomeNews'
 
 describe('getHomeNewsSlice', () => {
-  const initialState = {
-    loading: false,
-    error: false,
-    errorMessage: '',
-    results: [],
-    nextPage: '',
-  } as HomeNewsState
+  const initialState = { loading: false, error: false, errorMessage: '', results: [], nextPage: '' } as HomeNewsState
 
-  const responseData = {
-    status: 'ok',
-    totalResults: 1,
-    results: [{ title: 'test' }],
-    nextPage: '2137',
-  } as HomeNewsResponse
+  const responseData = { status: 'ok', totalResults: 1, results: [{ title: 'test' }], nextPage: '2137' } as HomeNewsResponse
 
   it('should handle getHomeNews.pending', () => {
     const action = { type: getHomeNews.pending.type }

@@ -9,11 +9,7 @@ import { tr } from '../../translations/translations'
 interface SideMenuMobileProps {
   isOpen: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
-  countries: {
-    name: string
-    link: string
-    code: string
-  }[]
+  countries: { name: string; link: string; code: string }[]
 }
 
 export default function SideMenuMobile(props: SideMenuMobileProps) {
@@ -48,7 +44,7 @@ export default function SideMenuMobile(props: SideMenuMobileProps) {
               leaveTo="-translate-x-full"
             >
               <Dialog.Panel className="flex flex-col w-full max-w-sm px-5 py-4 overflow-hidden text-blue-900 shadow-md dark:text-gray-50 bg-gray-50 dark:bg-gray-700 rounded-r-xl side-menu-mobile">
-                {/*modal header*/}
+                {/* modal header*/}
                 <Dialog.Title className="flex items-center justify-between w-full text-lg font-semibold">
                   <div className="flex items-center gap-2">
                     <FaGlobe />
@@ -60,7 +56,7 @@ export default function SideMenuMobile(props: SideMenuMobileProps) {
                   </button>
                 </Dialog.Title>
 
-                {/*modal body*/}
+                {/* modal body*/}
                 <div className="flex flex-col w-full mt-3 internal-scroll">
                   <ul className="flex flex-col">
                     {props.countries.map(country => (

@@ -30,11 +30,7 @@ export interface AppSettingsState {
   theme: AvailableThemes
 }
 
-const initialState = {
-  displayMode: 'tiles',
-  language,
-  theme,
-} as AppSettingsState
+const initialState = { displayMode: 'tiles', language, theme } as AppSettingsState
 
 export const appSettingsSlice: Slice<AppSettingsState> = createSlice({
   name: 'appSettings',

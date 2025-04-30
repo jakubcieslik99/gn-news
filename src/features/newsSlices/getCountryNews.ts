@@ -12,7 +12,7 @@ interface CountryNewsRequest {
 export interface CountryNewsResponse {
   status: string
   totalResults: number
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
   results: any[] | []
   nextPage: string
   fresh?: boolean
@@ -34,7 +34,7 @@ const getCountryNews = createAsyncThunk('/news/getCountryNews', async (sendData:
     )
 
     return { ...data, fresh: sendData.fresh }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error: any) {
     return thunkAPI.rejectWithValue('fetchError')
   }
@@ -46,18 +46,12 @@ export interface CountryNewsState {
   loading: boolean
   error: boolean
   errorMessage: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
   results: any[] | []
   nextPage: string
 }
 
-const initialState = {
-  loading: false,
-  error: false,
-  errorMessage: '',
-  results: [],
-  nextPage: '',
-} as CountryNewsState
+const initialState = { loading: false, error: false, errorMessage: '', results: [], nextPage: '' } as CountryNewsState
 
 export const getCountryNewsSlice: Slice<CountryNewsState> = createSlice({
   name: 'getCountryNews',
@@ -78,7 +72,7 @@ export const getCountryNewsSlice: Slice<CountryNewsState> = createSlice({
       else state.results = [...state.results, ...action.payload.results]
       state.nextPage = action.payload.nextPage
     })
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
     builder.addCase(getCountryNews.rejected, (state, action: PayloadAction<any>) => {
       state.loading = false
       if (action.payload) {

@@ -15,11 +15,7 @@ export default function LoadMoreButton(props: LoadMoreButtonProps) {
   const scrollToHandler = (id: string) => {
     props.getNextPage()
 
-    scroller.scrollTo(id, {
-      spy: true,
-      smooth: 'easeInOutCubic',
-      duration: 500,
-    })
+    scroller.scrollTo(id, { spy: true, smooth: 'easeInOutCubic', duration: 500 })
   }
 
   return (

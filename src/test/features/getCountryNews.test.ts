@@ -6,13 +6,7 @@ import getCountryNewsReducer, {
 } from '../../features/newsSlices/getCountryNews'
 
 describe('getCountryNewsSlice', () => {
-  const initialState = {
-    loading: false,
-    error: false,
-    errorMessage: '',
-    results: [],
-    nextPage: '',
-  } as CountryNewsState
+  const initialState = { loading: false, error: false, errorMessage: '', results: [], nextPage: '' } as CountryNewsState
 
   const responseData = {
     status: 'ok',

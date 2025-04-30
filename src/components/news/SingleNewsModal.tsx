@@ -41,7 +41,7 @@ export default function SingleNewsModal(props: SingleNewsModalProps) {
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel className="flex flex-col w-full max-w-md px-5 py-4 overflow-hidden text-blue-900 shadow-md dark:text-gray-50 bg-gray-50 dark:bg-gray-700 rounded-xl">
-                {/*modal header*/}
+                {/* modal header*/}
                 <Dialog.Title className="flex items-start justify-between w-full gap-3 text-lg font-semibold">
                   <div className="leading-snug text-left">{props.result?.title}</div>
 
@@ -50,7 +50,7 @@ export default function SingleNewsModal(props: SingleNewsModalProps) {
                   </button>
                 </Dialog.Title>
 
-                {/*modal body*/}
+                {/* modal body*/}
                 <div className="flex flex-col w-full gap-3 my-4">
                   {props.result?.image_url && (
                     <div className="overflow-hidden shadow rounded-xl">
@@ -70,7 +70,7 @@ export default function SingleNewsModal(props: SingleNewsModalProps) {
                   </div>
                 </div>
 
-                {/*modal footer*/}
+                {/* modal footer*/}
                 <div className="flex items-center justify-end w-full gap-[6px] mb-1 text-gray-700 dark:text-gray-400">
                   <FaCalendarAlt />
                   {Moment(props.result?.pubDate).format('DD.MM.YYYY, HH:mm')}

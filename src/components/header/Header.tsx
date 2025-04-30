@@ -42,8 +42,6 @@ export default function Header() {
 
     setSearchParams({ ...URL })
   }
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const searchingHandler = (e: any) => {
     e.preventDefault()
     filterURL(searching, category)
@@ -60,11 +58,7 @@ export default function Header() {
     setCategoryMenuOption(categoryMenuOptions[language as keyof typeof categoryMenuOptions][0])
     filterURL('', categoryMenuOptions[language as keyof typeof categoryMenuOptions][0].value)
 
-    scroller.scrollTo('main', {
-      spy: true,
-      smooth: 'easeInOutCubic',
-      duration: 500,
-    })
+    scroller.scrollTo('main', { spy: true, smooth: 'easeInOutCubic', duration: 500 })
   }
 
   const switchThemeHandler = () => {

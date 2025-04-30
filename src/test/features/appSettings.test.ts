@@ -7,11 +7,7 @@ import appSettingsReducer, {
 } from '../../features/appSlices/appSettings'
 
 describe('appSettingsSlice', () => {
-  const initialState = {
-    displayMode: 'tiles',
-    language: 'pl',
-    theme: 'light',
-  } as AppSettingsState
+  const initialState = { displayMode: 'tiles', language: 'pl', theme: 'light' } as AppSettingsState
 
   it('should switch display mode', () => {
     const action = { type: switchDisplayMode.type, payload: 'list' }

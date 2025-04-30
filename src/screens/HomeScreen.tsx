@@ -81,8 +81,7 @@ export default function HomeScreen() {
         {displayMode === 'tiles' ? (
           <div className="grid w-full max-w-xs gap-3 mx-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:max-w-none">
             {results.length
-              ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                results.map((result: any, index: number) => (
+              ? results.map((result: any, index: number) => (
                   <SingleNewsGrid key={index} id={index} type="homeRes" result={result} showSingleNews={showSingleNews} />
                 ))
               : null}
@@ -90,8 +89,7 @@ export default function HomeScreen() {
         ) : (
           <div className="flex flex-col w-full max-w-4xl gap-2 mx-auto">
             {results.length
-              ? // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                results.map((result: any, index: number) => (
+              ? results.map((result: any, index: number) => (
                   <SingleNewsList key={index} id={index} type="homeRes" result={result} showSingleNews={showSingleNews} />
                 ))
               : null}
