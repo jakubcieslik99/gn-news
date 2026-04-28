@@ -1,11 +1,10 @@
-import React, { PropsWithChildren } from 'react'
-import { render as rtlRender, RenderOptions } from '@testing-library/react'
-import { PreloadedState } from '@reduxjs/toolkit'
+import React, { type JSX, type PropsWithChildren } from 'react'
+import { render as rtlRender, type RenderOptions } from '@testing-library/react'
 import { Provider } from 'react-redux'
-import appStore, { setupStore, AppStore, RootState } from '../features/store'
+import appStore, { setupStore, type AppStore, type AppPreloadedState } from '../features/store'
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
-  preloadedState?: PreloadedState<RootState>
+  preloadedState?: AppPreloadedState
   store?: AppStore
   route?: string
 }

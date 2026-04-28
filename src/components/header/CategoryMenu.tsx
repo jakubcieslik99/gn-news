@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { FaAngleDown } from 'react-icons/fa'
 import { useAppSelector } from '../../features/store'
-import { categoryMenuOptions, CategoryMenuOption } from '../../constants/CategoryMenuOptions'
+import { categoryMenuOptions, type CategoryMenuOption } from '../../constants/CategoryMenuOptions'
 
 interface CategoryMenuProps {
   categoryOption: CategoryMenuOption

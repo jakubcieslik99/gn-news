@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import { useParams, useSearchParams } from 'react-router-dom'
-import { AnyAction } from 'redux'
+import type { AnyAction } from 'redux'
 import { scroller } from 'react-scroll'
 import { useAppSelector, useAppDispatch } from '../features/store'
 import { getCountryNews } from '../features/newsSlices/getCountryNews'
@@ -12,8 +12,8 @@ import LoadMoreButton from '../components/news/LoadMoreButton'
 import Loader from '../components/universal/Loader'
 
 export default function CountryScreen() {
-  const getCountryNewsAbort = useRef<(reason?: string | undefined) => void>()
-  const getCountryNewsNextPageAbort = useRef<(reason?: string | undefined) => void>()
+  const getCountryNewsAbort = useRef<((reason?: string | undefined) => void) | undefined>(undefined)
+  const getCountryNewsNextPageAbort = useRef<((reason?: string | undefined) => void) | undefined>(undefined)
 
   const { displayMode } = useAppSelector(state => state.appSettings)
   const { loading, error, errorMessage, results, nextPage } = useAppSelector(state => state.getCountryNews)

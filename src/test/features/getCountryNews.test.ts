@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest'
 import getCountryNewsReducer, {
   getCountryNews,
-  CountryNewsResponse,
-  CountryNewsState,
+  type CountryNewsResponse,
+  type CountryNewsState,
 } from '../../features/newsSlices/getCountryNews'
 
 describe('getCountryNewsSlice', () => {

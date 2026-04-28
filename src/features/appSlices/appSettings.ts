@@ -1,8 +1,8 @@
-import { Slice, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { type Slice, createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import {
-  AvailableDisplayModes,
-  AvailableLanguages,
-  AvailableThemes,
+  type AvailableDisplayModes,
+  type AvailableLanguages,
+  type AvailableThemes,
   availableLanguages,
   availableThemes,
 } from '../../constants/AppSettings'

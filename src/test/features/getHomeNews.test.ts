@@ -1,5 +1,9 @@
 import { describe, it, expect } from 'vitest'
-import getHomeNewsReducer, { getHomeNews, HomeNewsResponse, HomeNewsState } from '../../features/newsSlices/getHomeNews'
+import getHomeNewsReducer, {
+  getHomeNews,
+  type HomeNewsResponse,
+  type HomeNewsState,
+} from '../../features/newsSlices/getHomeNews'
 
 describe('getHomeNewsSlice', () => {
   const initialState = { loading: false, error: false, errorMessage: '', results: [], nextPage: '' } as HomeNewsState

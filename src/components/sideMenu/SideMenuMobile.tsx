@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { useLocation, Link } from 'react-router-dom'
 import { Transition, Dialog } from '@headlessui/react'
 import { FaGlobe, FaTimes } from 'react-icons/fa'
-import { FlagIcon, FlagIconCode } from 'react-flag-kit'
+import { FlagIcon, type FlagIconCode } from 'react-flag-kit'
 import { useAppSelector } from '../../features/store'
 import { tr } from '../../translations/translations'
 

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useLocation, Link } from 'react-router-dom'
-import { FlagIcon, FlagIconCode } from 'react-flag-kit'
+import { FlagIcon, type FlagIconCode } from 'react-flag-kit'
 import { FaGlobe, FaTh, FaList } from 'react-icons/fa'
 import { useAppSelector, useAppDispatch } from '../../features/store'
 import { switchDisplayMode } from '../../features/appSlices/appSettings'

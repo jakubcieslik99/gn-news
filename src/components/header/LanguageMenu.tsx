@@ -4,8 +4,8 @@ import { FlagIcon } from 'react-flag-kit'
 import { FaFlag } from 'react-icons/fa'
 import { useAppSelector, useAppDispatch } from '../../features/store'
 import { changeLanguage } from '../../features/appSlices/appSettings'
-import { AvailableCodes } from '../../constants/AppSettings'
-import { LanguageMenuOption, languageMenuOptions } from '../../constants/LanguageMenuOptions'
+import type { AvailableCodes } from '../../constants/AppSettings'
+import { type LanguageMenuOption, languageMenuOptions } from '../../constants/LanguageMenuOptions'
 
 export default function LanguageMenu() {
   const { language } = useAppSelector(state => state.appSettings)

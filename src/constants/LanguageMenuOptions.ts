@@ -1,4 +1,4 @@
-import { AvailableLanguages, AvailableCodes } from './AppSettings'
+import type { AvailableLanguages, AvailableCodes } from './AppSettings'
 
 export interface LanguageMenuOption {
   id: number

@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { AnyAction } from 'redux'
+import type { AnyAction } from 'redux'
 import { scroller } from 'react-scroll'
 import { useAppSelector, useAppDispatch } from '../features/store'
 import { getHomeNews } from '../features/newsSlices/getHomeNews'
@@ -12,7 +12,7 @@ import LoadMoreButton from '../components/news/LoadMoreButton'
 import Loader from '../components/universal/Loader'
 
 export default function HomeScreen() {
-  const getHomeNewsNextPageAbort = useRef<(reason?: string | undefined) => void>()
+  const getHomeNewsNextPageAbort = useRef<((reason?: string | undefined) => void) | undefined>(undefined)
 
   const { displayMode, language } = useAppSelector(state => state.appSettings)
   const { loading, error, errorMessage, results, nextPage } = useAppSelector(state => state.getHomeNews)

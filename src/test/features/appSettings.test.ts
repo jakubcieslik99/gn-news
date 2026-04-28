@@ -3,7 +3,7 @@ import appSettingsReducer, {
   switchDisplayMode,
   changeLanguage,
   switchTheme,
-  AppSettingsState,
+  type AppSettingsState,
 } from '../../features/appSlices/appSettings'
 
 describe('appSettingsSlice', () => {
